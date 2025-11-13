@@ -165,7 +165,7 @@ function App() {
         {screen === 'home' && (
           <>
             {(() => {
-              const hero = import.meta.env.DEV ? '/bettingsites/AVATAR.jpeg' : '/assets/bettingsites/AVATAR.jpeg'
+              const hero = (import.meta.env.BASE_URL || '/') + 'bettingsites/AVATAR.jpeg'
               return <img src={hero} alt="Aviator banner" className="hero-img" />
             })()}
             <h2 className="title">CHOOSE YOUR FAVORITE CASINO<br/>PLATFORM TO PROCEED</h2>

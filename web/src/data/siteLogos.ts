@@ -58,6 +58,6 @@ export const LOGOS: Record<string, string> = {
 export function logoUrlFor(id: string): string | undefined {
   const file = LOGOS[id]
   if (!file) return undefined
-  const base = '/bettingsites'
+  const base = (import.meta.env.BASE_URL || '/') + 'bettingsites'
   return `${base}/${file}`
 }
