@@ -4,6 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: mode === 'development' ? '/' : '/predictorv13pro/',
   server: {
     host: true,
     allowedHosts: [
@@ -47,7 +48,7 @@ export default defineConfig(({ mode }) => ({
         ]
       },
       workbox: {
-        navigateFallback: '/offline.html',
+        navigateFallback: 'offline.html',
         runtimeCaching: [
           {
             // Avoid referencing `self` in TS config: use globalThis with any cast
