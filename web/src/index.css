@@ -1,0 +1,205 @@
+:root {
+  --brand: #ff0033;
+  --brand-soft: #ff5577;
+  --text: #1b1b1b;
+  --text-weak: #666;
+  --card-bg: #ffffff;
+  --card-dark: #4c4c4c;
+  --shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+* { box-sizing: border-box }
+html, body, #root { height: 100% }
+body { margin: 0; font-family: Inter, system-ui, Arial, sans-serif; background:#fff; color:var(--text); }
+
+.screen { display:flex; flex-direction:column; min-height:100%; }
+.header {
+  position: fixed; top:0; left:0; right:0; z-index: 30;
+  background: var(--brand);
+  color: #fff;
+  padding: 16px 16px 24px;
+}
+.header-bar { display:flex; align-items:center; justify-content:space-between; }
+.header-actions { display:flex; align-items:center; gap:8px; }
+.header-logout { background:#fff; color:#111; border-color:#fff }
+.brand { font-weight: 800; font-size: 28px; letter-spacing: 1px; }
+
+.content { padding: 140px 16px 80px; }
+.title { text-align:center; color: var(--brand); font-weight: 800; letter-spacing: .5px; }
+.hero-img { width: 100%; max-width: 480px; display:block; margin: 0 auto 10px; border-radius: 14px; box-shadow: var(--shadow); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.site-card {
+  position: relative;
+  background: var(--card-bg);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  min-height: 150px;
+  display:flex; align-items:center; justify-content:center;
+  transition: transform .15s ease, box-shadow .15s ease;
+  overflow: hidden;
+}
+.site-card--dark { background: var(--card-dark); color: #fff; }
+.site-card--selected { outline: 3px solid #ff5c7a; box-shadow: 0 0 0 6px rgba(255,0,51,.15); }
+.site-card:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(0,0,0,0.12); }
+.site-name {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .3px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+.site-logo {
+  font-weight: 900;
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+  height: clamp(120px, 14vw, 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.site-logo-img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+@media (min-width: 480px) {
+  .site-logo { height: clamp(128px, 14vw, 180px); }
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  box-shadow: var(--shadow);
+}
+
+.bottom-nav {
+  position: fixed; left:0; right:0; bottom:0;
+  background: #fff; border-top: 1px solid #eee; box-shadow: 0 -8px 16px rgba(0,0,0,.04);
+  padding: 12px 16px; display:flex; justify-content:space-between; align-items:center;
+}
+.nav-btn { border:none; background:transparent; padding:6px; }
+.home-icon { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; background: var(--brand); border-radius:50%; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.home-icon svg { width:72%; height:72%; fill:#fff; }
+.whatsapp-icon { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; background:#25D366; border-radius:50%; box-shadow: 0 2px 6px rgba(0,0,0,.12); }
+.whatsapp-icon svg { width:72%; height:72%; fill:#fff; }
+.footer-center .version { font-weight:600; color: var(--text-weak); opacity:.6; letter-spacing:.4px; }
+
+.install-icon { width:32px; height:32px; display:inline-flex; align-items:center; justify-content:center; background:#111; border-radius:50%; box-shadow: 0 2px 6px rgba(0,0,0,.12); margin-right:8px; }
+.install-icon svg { width:72%; height:72%; fill:#fff; }
+
+.toast {
+  position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+  background: #fff; color: #111; border-radius: 12px; padding: 14px 18px; box-shadow: var(--shadow);
+  display:flex; align-items:center; gap:12px; z-index: 50;
+}
+.copy-toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #22c55e; /* success green */
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+.error-toast {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #ef4444; /* error red */
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+.checkmark { width:26px; height:26px; border-radius:50%; border:3px solid var(--brand); position:relative; display:inline-block }
+.checkmark::after { content:""; position:absolute; left:6px; top:10px; width:8px; height:14px; border: solid var(--brand); border-width:0 3px 3px 0; transform: rotate(45deg); }
+
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Modal */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.35); display:flex; align-items:center; justify-content:center; z-index: 60; }
+.modal--legal { z-index: 70; }
+.modal--forgot { z-index: 65; }
+.modal-card { background:#fff; border-radius:16px; box-shadow: var(--shadow); padding:20px; width: 92%; max-width: 440px; }
+.modal-card { max-height: 80vh; overflow-y: auto; }
+.modal-card h3 { margin:0 0 12px; }
+.modal-card label { display:block; font-size:14px; color:var(--text-weak); margin:10px 0 }
+.consent-label { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.modal-card input[type="text"],
+.modal-card input[type="email"],
+.modal-card input[type="password"] { width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:10px; }
+.modal-card input[type="checkbox"] { width:auto; height:auto; margin:0 6px 0 0; }
+.password-row { display:flex; align-items:center; gap:8px; }
+.password-row input { flex:1; }
+.password-toggle { white-space:nowrap; }
+.modal-actions { display:flex; gap:10px; justify-content:flex-end; margin-top: 14px; }
+.btn { border:1px solid #ddd; background:#fff; padding:10px 14px; border-radius:10px; cursor:pointer }
+.btn.primary { background: var(--brand); color:#fff; border-color: var(--brand) }
+.error { margin-top:8px; color:#d00; font-size:13px }
+.info { margin-top:8px; color:#1b1b1b; font-size:13px }
+.info--red { color: #e53935; }
+.link { background:none; border:none; color: var(--brand); cursor:pointer; margin-top:8px }
+.link-inline { margin-top:0; padding:0 }
+.link--blue { color: #1e88e5; }
+.footer-link { color: var(--text-weak); font-size: 12px; margin-left: 6px; }
+
+/* Payment Modal */
+.pay-tabs { display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 12px; }
+.tab { border:1px solid #eee; background:#fafafa; color:#111; padding:8px 12px; border-radius:999px; cursor:pointer; display:flex; align-items:center; gap:8px; font-weight:600 }
+.tab.active { background: var(--brand); color:#fff; border-color: var(--brand); }
+.tab--mpesa.active { background:#00A859; border-color:#00A859; color:#fff }
+.tab--airtel.active { background:#E61424; border-color:#E61424; color:#fff }
+.tab--paypal.active { background:#003087; border-color:#003087; color:#fff }
+.tab--crypto.active { background:#F7931A; border-color:#F7931A; color:#111 }
+.tab--paybill.active { background:#00A859; border-color:#00A859; color:#fff }
+.brand-icon { width:18px; height:18px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; }
+.brand-icon svg { width:70%; height:70%; }
+.brand-icon--mpesa { background:#00A859 }
+.brand-icon--airtel { background:#E61424 }
+.brand-icon--paypal { background:#003087 }
+.brand-icon--crypto { background:#F7931A }
+.brand-icon--paybill { background:#00A859 }
+.brand-banner { display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:12px; margin: 8px 0 12px; color:#fff; }
+.brand-banner--mpesa { background:#00A859 }
+.brand-banner--airtel { background:#E61424 }
+.brand-banner--paypal { background:#003087 }
+.brand-banner--crypto { background:#F7931A; color:#111 }
+.brand-banner--paybill { background:#00A859 }
+.brand-banner .brand-title { font-weight:800; letter-spacing:.3px }
+.brand-banner .brand-note { opacity:.9; font-size:13px }
+.pay-section { margin-top: 8px; }

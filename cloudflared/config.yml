@@ -1,0 +1,9 @@
+tunnel: 55add60b-391b-413c-8f00-c49328acede6
+credentials-file: C:\Users\KELVIN\.cloudflared\55add60b-391b-413c-8f00-c49328acede6.json
+
+ingress:
+  - hostname: predictorv13pro.aviatorwin.co.ke
+    service: http://localhost:5173
+  - hostname: api.aviatorwin.co.ke
+    service: http://localhost:8080
+  - service: http_status:404

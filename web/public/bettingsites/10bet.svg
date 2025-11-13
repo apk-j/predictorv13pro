@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg16"
+   version="1.1"
+   viewBox="0 0 875.56 665.73">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>10Bet_logo</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#4E454A;}</style>
+  </defs>
+  <title
+     id="title6">10Bet_logo</title>
+  <g
+     transform="translate(0,0.02998047)"
+     id="g8">
+    <path
+       id="path2"
+       d="M 542.7,0 C 402.2,0 282,87.1 233.2,210.2 V 15.5 H 0 V 650.2 H 233.2 V 455.5 c 48.8,123.1 169,210.2 309.5,210.2 183.8,0 332.9,-149 332.9,-332.9 C 875.6,148.9 726.6,0 542.7,0 Z m 67.8,502.6 H 565.6 V 610.1 H 519.7 V 502.6 h -44.9 v -48.9 h 135.6 v 48.9 z m 0.1,-190 h -82.8 v 17 h 74 v 45.3 h -74 v 15.9 h 82.8 v 45.9 H 474.9 v -170 h 135.7 z m -50.8,-62.9 h -85 v -170 h 82.6 c 35.1,0 57.8,19 57.8,48.4 0,14.5 -5.3,26.4 -15.1,34.2 11,8 17.3,21.1 17.3,36.3 0,31 -22.6,51.1 -57.6,51.1 z" />
+    <path
+       id="path4"
+       d="m 552,184.2 h -24.3 v 21.1 H 552 c 11,0 12.3,-6.4 12.3,-11.2 0,-9 -8.6,-9.9 -12.3,-9.9 z" />
+    <path
+       id="path6"
+       d="m 562.4,132.5 c 0,-2.9 0,-9.7 -12.7,-9.7 h -21.9 v 19.4 h 21.8 c 12.8,0 12.8,-7.3 12.8,-9.7 z" />
+  </g>
+</svg>

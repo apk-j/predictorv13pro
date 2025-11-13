@@ -1,0 +1,58 @@
+{
+  "id": "aviator-predictor-v13-pro",
+  "name": "Aviator Predictor V13 Pro",
+  "short_name": "Aviator Pro",
+  "description": "Premium Aviator prediction app with multi-casino connectors.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#ff0033",
+  "categories": ["entertainment", "games"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    { "name": "Open Aviator", "url": "/", "description": "Open the main predictions screen." }
+  ],
+  "screenshots": [
+    { "src": "/bettingsites/AVATAR.jpeg", "sizes": "1280x720", "type": "image/jpeg" }
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
